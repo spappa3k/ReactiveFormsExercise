@@ -1,0 +1,10 @@
+<div *ngIf="rubrica" class="container">
+    <div *ngFor="let c of rubrica; let i = index" id="rubrica">
+        <p>{{c.cognome}}</p><p>{{c.nome}}</p><a href="#" *ngIf="!show[i]" (click)="showMore(i)">Mostra di piu</a>
+        <div *ngIf="show[i]">
+            <p>Tipologia: {{c.tipologia}}</p><p>Data di nascita: {{c.nascita}}</p><p>{{c.email}}</p><p>{{c.telefono}}</p><p>via {{c.indirizzo.via}} {{c.indirizzo.civico}}</p>
+            <p>Provincia: {{c.indirizzo.provincia}}</p><p>CAP: {{c.indirizzo.cap}}</p>
+        </div>
+        <a href="#" *ngIf="show[i]" (click)="showMore(i)">Mostra meno</a>
+    </div>
+</div>
