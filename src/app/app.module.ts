@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ShowListComponent } from './show-list/show-list.component';
 import { provideHttpClient } from '@angular/common/http';
 import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms'; 
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormComponent } from './form/form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule 
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]

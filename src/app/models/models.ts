@@ -1,9 +1,9 @@
 export interface rubricaModel {
-  id: number
-  tipologia: string
+  id: number;
+  tipologia: boolean
   nome: string
   cognome: string
-  ragioneSociale: any
+  ragioneSociale: string
   indirizzo: Indirizzo
   email: string
   telefono: string

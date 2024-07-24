@@ -1,1 +1,67 @@
-<p>form works!</p>
+<p>Form works!</p>
+
+<div class="container mt-4">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <!-- Checkbox -->
+      <label class="form-check-label" for="tipologia">
+        It's a person?
+      </label>
+      <input class="form-check-input mb-4" type="checkbox" id="tipologia" formControlName="tipologia">
+      
+      <!-- Dettagli Generali -->
+      <div id="form">
+        <div>
+          <!-- Nome -->
+          <label for="nome">Name</label>
+          <input formControlName="nome" type="text" class="form-control w-500 mb-2" id="nome" placeholder="Insert your name">
+
+          <!-- Cognome -->
+          <label for="cognome">Surname</label>
+          <input formControlName="cognome" type="text" class="form-control w-500 mb-2" id="cognome" placeholder="Insert your surname">
+
+          <!-- Ragione Sociale -->
+          <label for="ragioneSociale">Business Name</label>
+          <input formControlName="ragioneSociale" type="text" class="form-control w-500 mb-2" id="ragioneSociale" placeholder="Insert your business name">
+
+          <!-- Email -->
+          <label for="email">Email</label>
+          <input formControlName="email" type="text" class="form-control w-500 mb-2" id="email" placeholder="Enter your Email">
+  
+          <!-- Telefono -->
+          <label for="telefono">Telephone</label>
+          <input formControlName="telefono" type="text" class="form-control w-500 mb-2" id="telefono" placeholder="Enter your telephone number">
+
+          <!-- Data di nascita -->
+          <label for="nascita">Date of Birth</label>
+          <input formControlName="nascita" type="date" class="form-control w-500 mb-2" id="nascita" placeholder="Enter your date of birth">
+        </div>
+
+        <!-- Indirizzo -->
+        <div formGroupName="indirizzoForm">
+          <!-- Via -->
+          <label for="via">Street</label>
+          <input formControlName="via" type="text" class="form-control w-500 mb-2" id="via" placeholder="Enter your street">
+
+          <!-- Civico -->
+          <label for="civico">Civic Number</label>
+          <input formControlName="civico" type="text" class="form-control w-500 mb-2" id="civico" placeholder="Enter your civic number">
+
+          <!-- Provincia -->
+          <label for="provincia">Province</label>
+          <input formControlName="provincia" type="text" class="form-control w-500 mb-2" id="provincia" placeholder="Enter your province">
+
+          <!-- CAP -->
+          <label for="cap">Postal Code</label>
+          <input formControlName="cap" type="text" class="form-control w-500 mb-2" id="cap" placeholder="Enter your postal code">
+
+          <!-- Nazione -->
+          <label for="nazione">Country</label>
+          <input formControlName="nazione" type="text" class="form-control w-500 mb-2" id="nazione" placeholder="Enter your country">
+        </div>
+      </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
