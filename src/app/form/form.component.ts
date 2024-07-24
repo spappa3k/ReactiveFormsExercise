@@ -31,7 +31,7 @@ indirizzoForm: this.fb.group({
 });
 
 onSubmit(){
-this.contattoNuovo=this.myForm.value;
+this.contattoNuovo=this.myForm.value as rubricaModel;
 console.log(this.contattoNuovo);
   }
 }
